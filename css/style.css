@@ -1,10 +1,20 @@
 /* HOME PAGE STYLES */
 
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+h1, h2 {
+  font-family: 'Paytone One', sans-serif;
+}
+
+body, p, a, span {
+  font-family: 'Jost', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
 body {
@@ -155,16 +165,16 @@ html {
   scroll-behavior: smooth;
 }
 
-
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   background-color: #D2C3C3;
-  color: black;
+  color: black; 
   padding: 40px 50px;
   text-align: center;
+  font-family: 'Jost', sans-serif; 
 }
 
 .footer-left,
@@ -194,16 +204,18 @@ footer img {
 footer h3 {
   font-size: 18px;
   margin-bottom: 10px;
+  color: black; 
 }
 
 footer p {
   font-size: 14px;
   line-height: 1.6;
+  color: black; 
 }
 
 footer a {
   display: block;
-  color: black;
+  color: black; 
   text-decoration: none;
   margin-bottom: 8px;
   font-family: 'Jost', sans-serif;
@@ -229,7 +241,7 @@ footer a {
   background-color: #d9d9d9; 
   padding: 25px;
   border-radius: 15px;
-  border: 2px solid #f4acb7;
+  border: 2px solid #744862;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
 }
@@ -254,8 +266,8 @@ footer a {
   margin: 0 auto 40px auto;
 }
 
-.education h3,
-.experience h3 {
+.education h2,
+.experience h2 {
   font-size: 22px;
   color: #744862;
   margin-bottom: 20px;
@@ -524,14 +536,15 @@ footer a {
 
 .community-intro {
   background: #d9d9d9;
-  padding: 20px 30px; 
+  padding: 10px 25px;
   color: #000;
-  font-size: 15px; 
-  line-height: 1.7;
-  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  border-radius: 12px;
   margin: 20px auto;
   max-width: 800px;
   animation: fadeIn 1s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* biar lebih pop up */
 }
 
 /* Hover effect */
@@ -541,23 +554,10 @@ footer a {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Terapkan ke bagian intro */
 .animate-intro {
   animation: fadeSlideUp 1s ease-out;
 }
-
 
 .community-main {
   display: flex;
@@ -592,7 +592,7 @@ footer a {
 }
 
 .volunteer-box h3 {
-  color: #a94442;
+  color: #744862;
   margin-bottom: 10px;
 }
 
