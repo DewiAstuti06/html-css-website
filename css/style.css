@@ -735,3 +735,82 @@ textarea:focus {
   object-fit: cover;
 }
 
+/* ==========================
+   Responsive for Mobile
+   ========================== */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .photo-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .intro-text h1 {
+    font-size: 26px;
+  }
+
+  .intro-text h2 {
+    font-size: 20px;
+  }
+
+  .intro-text p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .portfolio-columns,
+  .gallery-row,
+  .community-main,
+  .contact-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .portfolio-column,
+  .community-left,
+  .community-right,
+  .contact-left,
+  .contact-right {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .photo-frame {
+    width: 200px;
+    height: 200px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
