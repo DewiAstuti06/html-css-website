@@ -692,6 +692,11 @@ footer a {
   color: #744862;
 }
 
+.animate__headShake {
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite; /* Untuk memberi efek berulang */
+}
+
 .contact-left h3 {
   margin-top: 30px;
   margin-bottom: 10px;
