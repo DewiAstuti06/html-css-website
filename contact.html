@@ -9,14 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <!-- animated css -->
-        <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-      />
-  
-  <link rel="icon" type="image/png" href="images/logo.png" />
+  <!-- animated css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
+  <link rel="icon" type="image/png" href="images/logo.png" />
 </head>
 <body>
   <header>
@@ -49,7 +45,10 @@
       <h3 class="animate__animated animate__headShake">
         Thank You! any messages?
       </h3>
-      <textarea placeholder="share your feedback here..."></textarea>
+      <form action="#" method="post" class="feedback-form">
+        <textarea name="feedback" id="feedback" placeholder="share your feedback here..." required></textarea>
+        <button type="submit" class="send-button">Send</button>
+      </form>
     </div>
 
     <div class="contact-right">
