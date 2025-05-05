@@ -9,9 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- animated css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
   <link rel="icon" type="image/png" href="images/logo.png" />
 </head>
 <body>
@@ -45,9 +43,10 @@
       <h3 class="animate__animated animate__headShake">
         Thank You! any messages?
       </h3>
-      <form action="#" method="post" class="feedback-form">
+      <form action="https://formspree.io/f/myzwwzqb" method="POST" class="feedback-form">
         <textarea name="feedback" id="feedback" placeholder="share your feedback here..." required></textarea>
         <button type="submit" class="send-button">Send</button>
+        <p id="form-status" style="margin-top: 10px;"></p>
       </form>
     </div>
 
@@ -76,5 +75,29 @@
       <a href="contact.html">Contact</a>
     </div>
   </footer>
+
+  <script>
+    const form = document.querySelector(".feedback-form");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        status.textContent = "Thank you for your feedback!";
+        form.reset();
+      } else {
+        status.textContent = "Oops! Something went wrong.";
+      }
+    });
+  </script>
 </body>
 </html>
